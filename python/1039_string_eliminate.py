@@ -1,3 +1,6 @@
+'''
+遍历所有情况，依次将ABC插入不同的位置，看最后消除得到的长度。
+'''
 n = input()
 
 import sys
@@ -16,14 +19,17 @@ def dele(p):
                 index = i
             i += 1
         if index == len(p)-1:
+            # 边界条件
             q.append(p[-1])
         if len(q) == len(p):
+            # 如果长度不在变化，则停止
             flag = False
         else:
             p = q
     return q
 
 for line in sys.stdin:
+    # line中包含最后的换行符
     line = line[:-1]
     p = [i for i in line]
     minLen = len(line)
