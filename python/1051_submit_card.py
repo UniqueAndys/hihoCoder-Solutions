@@ -1,3 +1,8 @@
+'''
+贪心策略
+最长连续提交区间 必然是借助补提交卡将其中连续的未打卡日期补交得到
+遍历有限情况即可
+'''
 num = raw_input()
 for i in xrange(int(num)):
     line1 = raw_input()
@@ -7,7 +12,6 @@ for i in xrange(int(num)):
     if m >= n:
         print(100)
     else:
-        #days.insert(0, 0)
         days.append(101)
         max_day = days[m] - 1
         for i in xrange(n-m):
