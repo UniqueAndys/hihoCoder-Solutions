@@ -1,3 +1,6 @@
+'''
+快速计算两个年份之间闰年的个数
+'''
 n = int(raw_input())
 
 monthDict = {"January":1, "February":2, "March":3, "April":4,
@@ -14,6 +17,7 @@ def contain(start, end, digit):
     num = 0
     a = start % digit
     b = end % digit
+    # 边界情况
     if a != 0:
         start -= a
         num -= 1
@@ -36,12 +40,7 @@ for i in xrange(n):
     end = raw_input().split(" ")
     end[1] = int(end[1][:-1])
     end[2] = int(end[2])
-    '''
-    num = 0
-    for j in xrange(start[2], end[2]):
-        if isRun(j):
-            num += 1
-    '''
+
     num = numYear(start[2], end[2])
     if isRun(start[2]) and monthDict[start[0]]>2:
         num -= 1
