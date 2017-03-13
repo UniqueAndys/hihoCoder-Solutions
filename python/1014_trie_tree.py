@@ -1,11 +1,7 @@
-n = int(raw_input())
-
 '''
-class Node():
-    def __init__(self):
-        self.d = {}
+类似于图中结点与边的表示，对于trie树的每个结点，用一个字典表示。
+key是字母，value是list（下一个结点的地址和当前路径出现的次数）。
 '''
-
 class Trie():
     def __init__(self):
         self.head = {}
@@ -31,6 +27,7 @@ class Trie():
 
 trie = Trie()
 
+n = int(raw_input())
 for i in xrange(n):
     s = raw_input()
     trie.add(s)
