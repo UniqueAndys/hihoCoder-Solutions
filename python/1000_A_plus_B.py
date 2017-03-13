@@ -1,3 +1,6 @@
+'''
+逐行读取两个数，相加即可
+'''
 import sys
 
 for line in sys.stdin:
