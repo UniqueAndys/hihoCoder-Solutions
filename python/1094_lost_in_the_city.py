@@ -1,3 +1,6 @@
+'''
+遍历所有点，看对于某一个点其四个方向是否有可以匹配的
+'''
 n, m = [int(x) for x in raw_input().split()]
 
 city = []
@@ -9,7 +12,9 @@ for i in xrange(3):
     surround.append([x for x in raw_input()])
 
 def isMatch(city, p1, p2, surround):
+    # 顺时针排序
     index = [[0,0],[0,1],[0,2],[1,2],[2,2],[2,1],[2,0],[1,0]]
+    # 四个方位对其起始点
     for i in [0,2,4,6]:
         p = 0
         flag = True
