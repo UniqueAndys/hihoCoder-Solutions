@@ -1,3 +1,6 @@
+'''
+走一遍，看当前盒子里球的分布是否满足条件
+'''
 x, y, z = [int(i) for i in raw_input().split()]
 s = raw_input()
 
